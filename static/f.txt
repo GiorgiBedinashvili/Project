@@ -1,0 +1,8 @@
+Engine System
+
+The engine is the heart of the car, responsible for generating the power needed to move the vehicle. It operates based on the principle of internal combustion, where a mixture of fuel and air is compressed and ignited to produce mechanical energy. The main components of the engine system include:
+
+•	Engine: Converts fuel into mechanical energy. In internal combustion engines, fuel and air are mixed in the combustion chamber, compressed by the pistons, and ignited by spark plugs (in gasoline engines) or compression (in diesel engines), producing power.
+•	Cooling System: Includes the radiator, water pump, hoses, and thermostat. This system circulates coolant through the engine to absorb heat and then dissipates it through the radiator, maintaining optimal engine temperature.
+•	Fuel System: Consists of the fuel tank, fuel pump, fuel lines, and fuel injectors (or carburetor in older cars). It stores fuel and delivers it to the engine.
+•	Ignition System: Comprises spark plugs, ignition coil, and distributor (in older cars). This system provides the spark necessary to ignite the fuel-air mixture in the engine cylinders.

@@ -1,0 +1,17 @@
+{% extends "base.html "%}
+
+{% block content %}
+
+<div class="container text-center">
+    <form method="POST" class="" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }}
+        {{ form.name(class="form-control", placeholder=form.name.label.text) }}
+        {{ form.image.label }}
+        {{ form.image(class="form-control", placeholder=form.image.label.text) }}
+        {{ form.information.label }}
+        {{ form.information(class="form-control", placeholder=form.information.label.text) }}
+        {{ form.submit(class="btn btn-primary my-3") }}
+    </form>
+
+    {% endblock %}

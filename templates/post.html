@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container text-center">
+    <form method="POST" enctype="multipart/form-data" class="mx-5" style="width: 90%;">
+        {{ form.hidden_tag() }}
+        {{ form.post.label }}
+        {{ form.post(class="form-control", placeholder=form.post.label.text) }}
+        {{ form.photo.label }}
+        {{ form.photo(class="form-control", placeholder=form.photo.label.text) }}
+        {{ form.submit(class="btn btn-primary my-3") }}
+    </form>
+    <div class="row">
+        {% for posti in postebi %}
+        <div class="card mx-4 my-2" style="height: 200px; width: 125px;">
+            <img src="/static/{{ posti['photo'] }}" class="card-img-top my" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ posti['username'] }}</h5>
+                <p class="card-text"></p>
+                <a href="/posts_detals/{{ posti['id'] }}" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% endblock %}

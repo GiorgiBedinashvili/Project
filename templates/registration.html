@@ -1,0 +1,28 @@
+{% extends "base.html "%}
+
+{% block content %}
+
+<div class="container text-center">
+<form method="POST" class="mx-5">
+    {% for errors in form.errors.values() %}
+    <div class="alert alert-danger">
+        {{ errors[0] }}
+    </div>
+    {% endfor %}
+    {{ form.hidden_tag() }}
+    {{ form.username.label }}
+    {{ form.username(class="form-control", placeholder=form.username.label.text) }}
+    {{ form.email.label }}
+    {{ form.email(class="form-control", placeholder=form.email.label.text) }}
+    {{ form.password.label }}
+    {{ form.password(class="form-control", placeholder=form.password.label.text) }}
+    {{ form.repeat_password.label }}
+    {{ form.repeat_password(class="form-control", placeholder=form.repeat_password.label.text) }}
+    {{ form.birth.label }}
+    {{ form.birth(class="form-control", placeholder=form.birth.label.text) }}
+    {{ form.gender.label }}
+    {{ form.gender(class="form-control", placeholder=form.gender.label.text) }}
+    {{ form.submit(class="btn btn-primary my-3") }}
+</form class="my-3">
+
+{% endblock %}

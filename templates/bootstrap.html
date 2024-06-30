@@ -1,0 +1,18 @@
+{% extends "base.html "%}
+
+{% block content %}
+<div class="row">
+    {% for shawarma in shawarmas %}
+    <div class="card mx-4 my-2" style="height: 280px; width: 200px;">
+        <img src="/static/{{ shawarma['image']}}" class="card-img-top my" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">{{ shawarma['name'] }}</p>
+            <a href="/info/{{ shawarma['id'] }}" class="btn btn-primary">Info</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}
+
