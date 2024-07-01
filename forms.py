@@ -11,12 +11,12 @@ class RegisterForm(FlaskForm):
     password = PasswordField("Enter your password", validators=[DataRequired(), Length(min=8, max=64)])
     repeat_password = PasswordField("Repeat your password", validators=[DataRequired(), Length(min=8, max=64), equal_to("password", message="passwords don't mach")])
     birth = DateField("Enter your date of birth", validators=[DataRequired()])
-    gender = SelectField("Select your gender", choices=["Male", "Female", "Other"])
+    gender = SelectField("Select your gender", validators=[DataRequired()], choices=["Male", "Female", "Other"])
     submit = SubmitField("Submit")
 
 class PostForm(FlaskForm):
     post = TextAreaField("Write your post", validators=[DataRequired()])
-    photo = FileField("Add your photo")
+    photo = FileField("Add your photo", validators=[DataRequired()])
     submit = SubmitField("Submit")
 
 
@@ -29,8 +29,8 @@ class LoginForm(FlaskForm):
 
 class CardForm(FlaskForm):
     name = StringField("Add the name", validators=[DataRequired()])
-    image = FileField("Add the image")
-    information = TextAreaField("Add info")
+    image = FileField("Add the image", validators=[DataRequired()])
+    information = TextAreaField("Add info", validators=[DataRequired()])
     submit = SubmitField("Submit")
 
 
